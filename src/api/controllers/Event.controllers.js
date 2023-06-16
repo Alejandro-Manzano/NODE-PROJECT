@@ -100,7 +100,7 @@ const deleteEvent = async (req, res, next) => {
     userEvents.forEach(async (id) => {
       await User.findByIdAndUpdate(id, {
         $pull: { events: eventToDelete },
-      });
+      }
     }); */
 
     // Borramos el evento y le devolvemos una respuesta segun si se ha borrado bien o no
